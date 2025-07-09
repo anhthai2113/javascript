@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
+
 <body>
- 
- <script src="./acsset/main.js"></script>
+    <h1 id="main__title">Tiêu đề</h1>
+    <p class="description"> Mô tảa</p>
+
+    <input type="text" id="student__name" placeholder=" Mời nhập tên của bạn">
+
+    <button onclick="showGreeting()">Gửi</button>
+
+    <p id="greeting"></p>
+    <script src="./acsset/main.js"></script>
 </body>
+
 </html>
