@@ -1,9 +1,24 @@
-const title = document.getElementById("main__title");
-    title.innerText = "Chào Mừng Bạn Đến Với Khóa Học JavaScript!";
-    const description = document.querySelector(".description");
-    description.innerHTML = "Bạn sẽ học về <strong>DOM, Events</strong>";
-    function showGreeting() {
-      const name = document.getElementById("student__name").value;
-      const greeting = document.getElementById("greeting");
-      greeting.innerText = `Xin chào, ${name}!`;
-    }
+ function addTask() {
+      const input = document.getElementById('taskInput');
+      const taskText = input.value.trim();
+      
+      if (taskText === "") {
+        alert("Vui lòng nhập công việc!");
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = taskText;
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Xoá";
+      deleteBtn.className = "delete-btn";
+      deleteBtn.onclick = function () {
+        li.remove();
+      };
+
+      li.appendChild(deleteBtn);
+      document.getElementById("taskList").appendChild(li);
+
+      input.value = ""; 
+      input.focus(); }

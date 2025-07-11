@@ -11,21 +11,45 @@
             padding: 20px;
         }
 
-        .description {
-            margin-bottom: 20px;
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .delete-btn {
+            margin-left: 10px;
+            color: white;
+            background-color: red;
+            border: none;
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 2px;
         }
     </style>
 </head>
 
 <body>
-    <h1 id="main__title">Tiêu đề</h1>
-    <p class="description"> Mô tảa</p>
+    <h1>Danh sách công việc</h1>
 
-    <input type="text" id="student__name" placeholder=" Mời nhập tên của bạn">
+    <input type="text" id="taskInput" placeholder="Nhập công việc">
+    <button onclick="addTask()">Thêm</button>
 
-    <button onclick="showGreeting()">Gửi</button>
+    <ul id="taskList"></ul>
 
-    <p id="greeting"></p>
     <script src="./acsset/main.js"></script>
 </body>
 
